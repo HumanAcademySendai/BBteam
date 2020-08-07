@@ -11,8 +11,10 @@ bool GameMain::Initialize()
 {
 	// TODO: Add your initialization logic here
 	WindowTitle(_T("ES Game Library"));
-
-
+	player = GraphicsDevice.CreateSpriteFromFile(_T("player.png"));
+	bg = GraphicsDevice.CreateSpriteFromFile(_T("bg.png"));
+	x = 0;
+	y = 0;
 	return true;
 }
 
@@ -36,8 +38,23 @@ void GameMain::Finalize()
 int GameMain::Update()
 {
 	// TODO: Add your update logic here
-
-
+	KeyboardState key = Keyboard->GetState();
+	if (key.IsKeyDown(Keys_Right))
+	{
+		x += 10;
+	}
+	if (key.IsKeyDown(Keys_Left))
+	{
+		x -= 10;
+	}
+	if (key.IsKeyDown(Keys_Down))
+	{
+		y += 10;
+	}
+	if (key.IsKeyDown(Keys_Up))
+	{
+		y -= 10;
+	}
 	return 0;
 }
 
@@ -53,7 +70,8 @@ void GameMain::Draw()
 
 
 	SpriteBatch.Begin();
-
+	SpriteBatch.Draw(*bg, Vector3(0, 0, 0));
+	SpriteBatch.Draw(*player, Vector3(x, y, 0));
 
 	SpriteBatch.End();
 
