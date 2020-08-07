@@ -13,6 +13,7 @@ bool GameMain::Initialize()
 	WindowTitle(_T("ES Game Library"));
 
 
+
 	return true;
 }
 
@@ -37,6 +38,11 @@ int GameMain::Update()
 {
 	// TODO: Add your update logic here
 
+	KeyboardBuffer Key_buffer = Keyboard->GetBuffer();
+
+	if (Key_buffer.IsPressed(Keys_Return)) {
+		return GAME_SCENE(new リザルトシーン);
+	}
 
 	return 0;
 }

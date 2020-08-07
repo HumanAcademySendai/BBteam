@@ -3,14 +3,14 @@
 #include "GameScene.hpp"
 #include "../ESGLib.h"
 
-class TemplateScene : public CGameScene {
+class タイトルシーン : public CGameScene {
 public:
-	TemplateScene()
+	タイトルシーン()
 	{
 //		ContentRootDirectory(_T("Content"));
 	}
 
-	virtual ~TemplateScene()
+	virtual ~タイトルシーン()
 	{
 		Finalize();
 
@@ -55,6 +55,12 @@ private:
 private:
 	// 変数宣言
 
+	SPRITE タイトル背景;
+	SPRITE フェードアウト;
+
+	int 秒;
+	int フェードアウト_state;
+	float フェードアウト数;
 
 	// 関数プロトタイプ
 

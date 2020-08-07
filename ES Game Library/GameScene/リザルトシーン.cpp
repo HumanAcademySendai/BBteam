@@ -1,5 +1,5 @@
 #include "../StdAfx.h"
-#include "TemplateScene.hpp"
+#include "リザルトシーン.hpp"
 
 /// <summary>
 /// Allows the game to perform any initialization it needs to before starting to run.
@@ -7,10 +7,11 @@
 /// related content.  Calling base.Initialize will enumerate through any components
 /// and initialize them as well.
 /// </summary>
-bool TemplateScene::Initialize()
+bool リザルトシーン::Initialize()
 {
 	// TODO: Add your initialization logic here
 
+	リザルト背景 = GraphicsDevice.CreateSpriteFromFile(_T("リザルト背景.jpg"));
 
 	return true;
 }
@@ -19,7 +20,7 @@ bool TemplateScene::Initialize()
 /// Finalize will be called once per game and is the place to release
 /// all resource.
 /// </summary>
-void TemplateScene::Finalize()
+void リザルトシーン::Finalize()
 {
 	// TODO: Add your finalization logic here
 
@@ -32,7 +33,7 @@ void TemplateScene::Finalize()
 /// <returns>
 /// Scene continued value.
 /// </returns>
-int TemplateScene::Update()
+int リザルトシーン::Update()
 {
     // TODO: Add your update logic here
 
@@ -43,13 +44,18 @@ int TemplateScene::Update()
 /// <summary>
 /// This is called when the game should draw itself.
 /// </summary>
-void TemplateScene::Draw()
+void リザルトシーン::Draw()
 {
 	// TODO: Add your drawing code here
 	GraphicsDevice.Clear(Color_CornflowerBlue);
 
 	GraphicsDevice.BeginScene();
 
+	SpriteBatch.Begin();
+
+	SpriteBatch.Draw(*リザルト背景, Vector3(0.0f, 0.0f, 0.0f));
+
+	SpriteBatch.End();
 
 	GraphicsDevice.EndScene();
 }
