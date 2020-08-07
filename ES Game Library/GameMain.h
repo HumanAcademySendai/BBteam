@@ -56,7 +56,9 @@ private:
 
 private:
 	// •Ï”éŒ¾
-
+	SPRITE player;
+	SPRITE bg;
+	float x, y;
 
 	// ŠÖ”éŒ¾
 
