@@ -226,9 +226,6 @@
     <ClCompile Include="Extension\OpenGL\OpenGL.cpp">
       <Filter>ソース ファイル\拡張\OpenGL</Filter>
     </ClCompile>
-    <ClCompile Include="GameScene\TemplateScene.cpp">
-      <Filter>ソース ファイル\ゲームシーン</Filter>
-    </ClCompile>
     <ClCompile Include="GameScene\SceneShared.cpp">
       <Filter>ソース ファイル\ゲームシーン</Filter>
     </ClCompile>
@@ -255,6 +252,12 @@
     </ClCompile>
     <ClCompile Include="Extension\Direct2D\Direct2D.cpp">
       <Filter>ソース ファイル\拡張\Direct2D</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene\タイトルシーン.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene\リザルトシーン.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -382,9 +385,6 @@
     <ClInclude Include="GameScene\SceneShared.hpp">
       <Filter>ヘッダー ファイル\ゲームシーン</Filter>
     </ClInclude>
-    <ClInclude Include="GameScene\TemplateScene.hpp">
-      <Filter>ヘッダー ファイル\ゲームシーン</Filter>
-    </ClInclude>
     <ClInclude Include="ESGLib.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -411,6 +411,12 @@
     </ClInclude>
     <ClInclude Include="Extension\Direct2D\Direct2D.hpp">
       <Filter>ヘッダー ファイル\拡張\Direct2D</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene\タイトルシーン.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene\リザルトシーン.hpp">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

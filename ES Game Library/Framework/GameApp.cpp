@@ -133,7 +133,7 @@ bool CGameApp::Initialize(const HINSTANCE hInstance)
 	::SetCurrentDirectory(string_buffer);
 
 	// ゲームシーン設定
-	if(m_GameProc.CreateScene(new GameMain()) == false)
+	if(m_GameProc.CreateScene(new タイトルシーン()) == false)
 		return false;
 
 	return true;
